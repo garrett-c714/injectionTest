@@ -6,6 +6,10 @@
     <body>
         <template id='test-template'>
             <style>
+                /*inline <style> tag is REQUIRED inside the 
+                <template> these styles affect only this,
+                and the template cannot be affected by style.css
+                or other selectors.*/
                 h1 {
                     color: gray;
                     background-color: blue;
@@ -15,6 +19,10 @@
                 <h1>Template Here</h1>
             </div>
         </template>
+        <test-template></test-template>
+        <!--Proof of concept that the injection works on the same
+        document as the template. the <test-template> line creates
+        an instantiation of the template, can be repeated multiple times.-->
         <a href='index.html'>Back Home</a> 
         <script src='injector.js'></script>
     </body>
