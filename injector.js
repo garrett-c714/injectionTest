@@ -9,6 +9,22 @@ const templates = `
 <div>
     <h1>Template Here</h1>
 </div>
+</template>
+<template id = 'footer-template'>
+<style>
+    div {
+        background-color: orange;
+        display: flex;
+        justify-content: space-around;
+    }
+    p {
+        color: white;
+        background-color: black;
+    }
+</style>
+<div>
+    <p>This is the second template.</p>
+</div>
 </template>`;
 /*The stuff above here is important. All of the code you want to 
 reuse will live in the 'templates' variable. Copy and paste the 
@@ -52,5 +68,17 @@ to #whatever-the-name-of-the-template-is
 The template MUST be added into the variable at the top of this file.
 After the class the next line should be window.customElements.define()
 in the same format as the test one above. And thats it. */
+class TemplateTwo extends HTMLElement {
+    constructor() {
+        super();
+        const shadowRoot = this.attachShadow({mode: 'open'});
+        const template = document.querySelector('#footer-template');
+        shadowRoot.appendChild(template.content.cloneNode(true));
+    };
+    connectedCallback() {
+        console.log('2 is connected');
+    };
+}
+window.customElements.define('foo-ter' , TemplateTwo);
 
 console.log('connection active'); //debug
