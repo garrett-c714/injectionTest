@@ -1,3 +1,9 @@
+:root {
+  --navy: #185f76;  
+}
 h1 {
     color: red;
+}
+h2 {
+    color: var(--navy);
 }
