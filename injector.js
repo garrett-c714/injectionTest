@@ -33,7 +33,7 @@ class TestTemplate extends HTMLElement {
         console.log('connected!');
     }
 }
-/*T he class creates the element by selecting a <template> element
+/*The class creates the element by selecting a <template> element
 from <templates-house>, and then instantiates it.The formula for the
 class/structure will be identical with each template */
 window.customElements.define('test-template' , TestTemplate);
