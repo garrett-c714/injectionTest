@@ -43,4 +43,14 @@ window.customElements.define('test-template' , TestTemplate);
 here, 'test-template' becomes <test-template></test-template> and 
 gains life from the class TestTemplate. */
 
+
+/*To use a new element you have to create a new class for it.
+to make one for navbar, just copy and paste the whole class, 
+change the name, and change the querySelector('#test-template')
+to #whatever-the-name-of-the-template-is
+
+The template MUST be added into the variable at the top of this file.
+After the class the next line should be window.customElements.define()
+in the same format as the test one above. And thats it. */
+
 console.log('connection active'); //debug
