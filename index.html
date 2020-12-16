@@ -7,14 +7,15 @@
 <body>
     <h1>Page</h1>
     <a href='templates.html'>Templates</a>
+<div id='inject-here'>
+    <p>Test Paragraph</p>
+</div>
+<test-template></test-template>
+<div id='templates-house'>
+    <!--This div is the key to it all-->
+</div>
+<!--Scripts-->
 <script src='script.js'></script>
 <script src='injector.js'></script>
-<!-- Ideally, including <test-template></test-template> in this doc
-would create an element based on the template, but the constructor 
-returns null because the templates.html document isn't loaded or 
-"in focus" when we are on the home page, theres no way for it to
-select the template. This seems like some kind of thinking problem,
-and I believe theres an easy way to do this, but I can't come
-up with it.-->
 </body>
 </html>
