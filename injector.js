@@ -44,7 +44,7 @@ class FirstTemplate extends HTMLElement {
         console.log('connected!');
     }
 }
-window.customElements.define('element-one' , TestTemplate);
+window.customElements.define('element-one' , FirstTemplate);
 
 
 
@@ -59,5 +59,5 @@ class SecondTemplate extends HTMLElement {
         console.log('2 is connected');
     };
 }
-window.customElements.define('element-two' , TemplateTwo);
+window.customElements.define('element-two' , SecondTemplate);
 
