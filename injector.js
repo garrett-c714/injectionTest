@@ -7,7 +7,7 @@ const templates = `
     }
 </style>
 <div>
-    <h1>Template Here</h1>
+    <h1>This is the first template.</h1>
 </div>
 </template>
 
